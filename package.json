@@ -1,0 +1,42 @@
+{
+  "name": "snowpack-template-tailwind",
+  "version": "0.9.3",
+  "author": "Jonathan Alvarez",
+  "description": "Snowpack CSA Template for tailwind, prettier and autopublish on GH pages",
+  "repository": "github:jonalvarezz/snowpack-template-tailwind",
+  "homepage": "https://jonalvarezz.github.io/snowpack-template-tailwind",
+  "keywords": [
+    "snowpack",
+    "csa-template"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "prettier --check \"src/**/*.js\"",
+    "pre-commit": "pretty-quick --staged",
+    "install:husky": "husky install"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "files": [
+    ".gitignore",
+    ".github/workflows/publish.yml",
+    "public",
+    "src",
+    "snowpack.config.js",
+    "yarn.lock"
+  ],
+  "devDependencies": {
+    "husky": "7",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^3.1.0",
+    "snowpack": "^3.0.11",
+    "tailwindcss": "^2.0.2"
+  }
+}
